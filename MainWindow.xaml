@@ -1,0 +1,28 @@
+﻿<Window x:Class="StaticDataConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StaticDataConverter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="578">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="275*"/>
+            <ColumnDefinition Width="Auto" MinWidth="79"/>
+            <ColumnDefinition Width="204*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="InputDat" Grid.Row="0" Grid.Column="0" Margin="5,5,5,5" Text="Select input file..."/>
+        <Button Content="Browse" Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" Click="BrowseDat"/>
+        <Button Content="Convert DAT to JSON" Grid.Row="0" Grid.Column="2" Margin="5,5,5,5" Click="ConvertDatToJson"/>
+
+        <TextBox x:Name="InputJSON" Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" Text="Select input file..."/>
+        <Button Content="Browse" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5" Click="BrowseJSON"/>
+        <Button Content="Convert JSON to DAT" Grid.Row="1" Grid.Column="2" Margin="5,5,5,5" Click="ConvertJsonToDat"/>
+    </Grid>
+</Window>
