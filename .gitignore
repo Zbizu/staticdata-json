@@ -1,0 +1,21 @@
+# converter files
+*.dat
+*.json
+
+# archives
+*.7z
+*.zip
+
+# npp backups
+*.bak
+
+# temp folders
+.vs/
+bin/
+obj/
+
+# temp files
+*.log
+
+# debug symbols
+*.pdb
