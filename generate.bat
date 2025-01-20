@@ -1,1 +1,1 @@
-protoc --csharp_out=./ StaticData.proto
+protoc --csharp_out=./ SoundBank.proto

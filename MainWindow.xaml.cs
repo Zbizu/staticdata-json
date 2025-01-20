@@ -1,5 +1,6 @@
 ﻿using Google.Protobuf;
 using Microsoft.Win32;
+using Soundbank;
 using System.IO;
 using System.Windows;
 
@@ -28,9 +29,9 @@ namespace StaticDataConverter
             try {
                 string json = File.ReadAllText(InputJSON.Text);
 
-                // Parse JSON into a StaticData protobuf object
+                // Parse JSON into a SoundBank protobuf object
                 var parser = new JsonParser(JsonParser.Settings.Default.WithIgnoreUnknownFields(true));
-                var staticData = parser.Parse<StaticData.StaticData>(json);
+                var staticData = parser.Parse<Sounds>(json);
 
                 // Serialize to .dat file
                 string outputFilePath = Path.ChangeExtension(InputJSON.Text, ".dat");
@@ -47,7 +48,7 @@ namespace StaticDataConverter
         private void ConvertDatToJson(object sender, RoutedEventArgs e) {
             try {
                 // Read .dat file into a StaticData protobuf object
-                var staticData = new StaticData.StaticData();
+                var staticData = new Sounds();
                 using (var input = File.OpenRead(InputDat.Text)) {
                     staticData.MergeFrom(input);
                 }
