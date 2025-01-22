@@ -2,7 +2,7 @@ branch master: allows to pack/unpack staticdata
 
 branch sound: allows to pack/unpack sounds
 
-usage: open csproj, compile and run, select a file, and press a a button
+usage: open csproj, compile and run, select a file, and press a conversion button
 
 dat/json files generate in the same folder as the input file
 
